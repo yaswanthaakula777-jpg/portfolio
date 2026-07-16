@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+}
+
+.hero{
+    text-align:center;
+    padding:60px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+}
+
+.hero h1{
+    margin-top:20px;
+    font-size:40px;
+}
+
+.hero h3{
+    margin-top:10px;
+}
+
+.hero p{
+    margin:20px auto;
+    width:60%;
+}
+
+.btn{
+    text-decoration:none;
+    color:white;
+    background:#ff6b6b;
+    padding:12px 25px;
+    border-radius:25px;
+}
+
+.skills,
+#projects,
+.contact{
+    padding:50px;
+    text-align:center;
+}
+
+.skill-box,
+.project{
+    display:inline-block;
+    background:white;
+    color:black;
+    padding:15px 25px;
+    margin:10px;
+    border-radius:10px;
+}
+    </style>
+</head>
+<body>
+
+<div class="hero">
+
+    <img src="images/codephoto.jpeg" alt="Profile">
+
+    <h1>Yaswanth Aakula</h1>
+
+    <h3>Student | Web Developer</h3>
+
+    <p>
+        Passionate about HTML, CSS, JavaScript,
+        Java and Python development.
+    </p>
+
+    <a href="#projects" class="btn">View Projects</a>
+
+</div>
+
+<section class="skills">
+    <h2>Skills</h2>
+
+    <div class="skill-box">HTML</div>
+    <div class="skill-box">CSS</div>
+    <div class="skill-box">JavaScript</div>
+    <div class="skill-box">Java</div>
+    <div class="skill-box">Python</div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        Movie Recommendation Website
+    </div>
+
+    <div class="project">
+        Music Playlist Website
+    </div>
+
+    <div class="project">
+        Login & Signup System
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Contact</h2>
+
+    <p>Email: yaswanthaakula777@gmail.com</p>
+</section>
+
+</body>
+</html>

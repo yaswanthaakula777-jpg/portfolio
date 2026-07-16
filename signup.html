@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loginpage</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-image:url(lo.webp);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background: rgba(255, 255, 255, 0.5);
+    height: 270px;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+}
+.start{
+    text-align: center;
+    text-decoration-line: underline;
+    font-style: italic;
+}
+.enter{
+   
+     /* Layout & Shape */
+    padding: 12px 32px;
+    border-radius: 50px; /* Keeps the pill shape */
+    border: none;
+    cursor: pointer;
+  
+  /* Modern Colors & Typography */
+    background-color: #ea4138; /* A more vibrant version of your pink */
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-top: 100px;
+    width: 70%;
+    margin-left: auto;
+    margin-left: 30px;
+    
+  /* Subtle UI Depth */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    /* Smooth Animation */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover State: Slight lift and brighten */
+.enter:hover {
+    background-color: #ed7e78;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Active State: "Pressed" effect */
+.enter:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.in1{
+    position: absolute;
+    bottom: 60%;
+    left: 43%;
+    border-radius: 20px;
+    height: 30px;
+    width: 210px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 2px solid #ff9999;
+    box-shadow: 0 0 5px rgba(255,153,153,0.5);
+    padding-left: 15px;
+    
+}
+
+.in1:hover{
+    box-shadow: 0 0 22px #db3535,0 0 44px #ec489933;
+    
+}
+.in2{
+    position: absolute;
+    bottom: 55%;
+    left: 43%;
+    height: 30px;
+    width: 210px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 2px solid #ff9999;
+    box-shadow: 0 0 5px rgba(255,153,153,0.5);
+    padding-left: 15px;
+}
+
+.in2:hover{
+     box-shadow: 0 0 22px #db3535,0 0 44px #ec489933;
+}
+.in3{
+    position: absolute;
+    bottom: 50%;
+    left: 43%;
+    height: 30px;
+    width: 210px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    outline: none;
+    border: 2px solid #ff9999;
+    box-shadow: 0 0 5px rgba(255,153,153,0.5);
+    padding-left: 15px;
+    -webkit-text-security: disc;
+}
+
+.in3:hover{
+    box-shadow: 0 0 22px #db3535,0 0 44px #ec489933;
+    
+}
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+    <div class="Logincontainer">
+        <h2 class="start">User Login</h2>
+        <form id="loginform" >
+            
+            
+                <input type="text" class="in1" id="name" placeholder="Your Name">
+                <br>
+                
+                <input type="text" class="in2" id="username" placeholder="Your RegNo">
+                <br>
+                
+                <input type="text" class="in3" id="password" placeholder="Your Password">
+                <br>
+            
+              <button type="button" class="enter" id="gert">Sign-UP</button>
+            
+        </form>
+    </div>
+    </div>
+    <script>
+        const homeButton=document.getElementById('homeBtn')
+const passButton=document.getElementById('passBtn')
+const certButton=document.getElementById('certBtn')
+const enterButton=document.getElementById('enterBtn')
+const contButton=document.getElementById('contBtn')
+homeButton.addEventListener('click',function(){
+    window.location.href='home2.html';
+});
+passButton.addEventListener('click',function(){
+    window.location.href='paspage.html';
+});
+certButton.addEventListener('click',function(){
+    window.location.href='certifi.html';
+});
+enterButton.addEventListener('click',function(){
+    window.location.href='entertain.html';
+});
+contButton.addEventListener('click',function(){
+    window.location.href='contact.html';
+});
+    </script>
+    
+</body>
+</html>
