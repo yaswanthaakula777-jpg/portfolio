@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loginpage</title>
+    <title>Signup-page</title>
     <style>
         *{
     margin: 0;
@@ -11,12 +11,30 @@
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
 }
-body{
-    background-image:url(lo.webp);
-    height: 100vh;
+body {
+    min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffd6e7 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #d9e7ff 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #f0edff,
+            #eaf7ff
+        );
 }
 .container{
     background: rgba(255, 255, 255, 0.5);
@@ -34,36 +52,34 @@ body{
     text-decoration-line: underline;
     font-style: italic;
 }
-.enter{
-   
-     /* Layout & Shape */
+.enter {
+    display: block;
+
     padding: 12px 32px;
-    border-radius: 50px; /* Keeps the pill shape */
+
+    border-radius: 50px;
     border: none;
+
     cursor: pointer;
-  
-  /* Modern Colors & Typography */
-    background-color: #ea4138; /* A more vibrant version of your pink */
+
+    background-color: #ea4138;
     color: white;
+
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 16px;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-top: 100px;
-    width: 70%;
-    margin-left: auto;
-    margin-left: 30px;
-    
-  /* Subtle UI Depth */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
-                0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    
-    /* Smooth Animation */
+
+    margin: 20px auto 0;
+
+    width: 210px;
+
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover State: Slight lift and brighten */
 .enter:hover {
     background-color: #ed7e78;
     transform: translateY(-1px);
@@ -76,57 +92,38 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.in1,
+.in2,
+.in3 {
+    position: relative;
+    display: block;
 
-
-.in1{
-    position: absolute;
-    bottom: 60%;
-    left: 43%;
-    border-radius: 20px;
-    height: 30px;
     width: 210px;
+    height: 30px;
+
+    margin: 10px auto;
+
+    border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.5);
+
     outline: none;
     border: 2px solid #ff9999;
-    box-shadow: 0 0 5px rgba(255,153,153,0.5);
+
+    box-shadow: 0 0 5px rgba(255, 153, 153, 0.5);
+
     padding-left: 15px;
-    
+    box-sizing: border-box;
 }
+
 
 .in1:hover{
     box-shadow: 0 0 22px #db3535,0 0 44px #ec489933;
     
 }
-.in2{
-    position: absolute;
-    bottom: 55%;
-    left: 43%;
-    height: 30px;
-    width: 210px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    outline: none;
-    border: 2px solid #ff9999;
-    box-shadow: 0 0 5px rgba(255,153,153,0.5);
-    padding-left: 15px;
-}
+
 
 .in2:hover{
      box-shadow: 0 0 22px #db3535,0 0 44px #ec489933;
-}
-.in3{
-    position: absolute;
-    bottom: 50%;
-    left: 43%;
-    height: 30px;
-    width: 210px;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    outline: none;
-    border: 2px solid #ff9999;
-    box-shadow: 0 0 5px rgba(255,153,153,0.5);
-    padding-left: 15px;
-    -webkit-text-security: disc;
 }
 
 .in3:hover{
@@ -139,46 +136,95 @@ body{
 <body>
     <div class="container">
     <div class="Logincontainer">
-        <h2 class="start">User Login</h2>
+        <h2 class="start">Sign Up</h2>
         <form id="loginform" >
             
             
-                <input type="text" class="in1" id="name" placeholder="Your Name">
-                <br>
-                
-                <input type="text" class="in2" id="username" placeholder="Your RegNo">
-                <br>
-                
-                <input type="text" class="in3" id="password" placeholder="Your Password">
-                <br>
-            
-              <button type="button" class="enter" id="gert">Sign-UP</button>
+                <input 
+    type="text" 
+    class="in1" 
+    id="name" 
+    placeholder="Your Name"
+>
+
+<input 
+    type="text" 
+    class="in2" 
+    id="regNo" 
+    placeholder="Your RegNo"
+>
+
+<input 
+    type="password" 
+    class="in3" 
+    id="password" 
+    placeholder="Your Password"
+>
+
+<button 
+    type="button" 
+    class="enter" 
+    id="signupBtn"
+>
+    Sign-Up
+</button>
             
         </form>
     </div>
     </div>
-    <script>
-        const homeButton=document.getElementById('homeBtn')
-const passButton=document.getElementById('passBtn')
-const certButton=document.getElementById('certBtn')
-const enterButton=document.getElementById('enterBtn')
-const contButton=document.getElementById('contBtn')
-homeButton.addEventListener('click',function(){
-    window.location.href='home2.html';
+  <script>
+
+const signupButton = document.getElementById("signupBtn");
+
+signupButton.addEventListener("click", async function() {
+
+    const name = document.getElementById("name").value;
+    const regNo = document.getElementById("regNo").value;
+    const password = document.getElementById("password").value;
+
+    if (!name || !regNo || !password) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    try {
+
+        const response = await fetch("http://localhost:5001/signup", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                name: name,
+                regNo: regNo,
+                password: password
+            })
+        });
+
+        const data = await response.json();
+
+        alert(data.message);
+
+        if (response.ok) {
+
+            document.getElementById("name").value = "";
+            document.getElementById("regNo").value = "";
+            document.getElementById("password").value = "";
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        alert("Cannot connect to server");
+
+    }
+
 });
-passButton.addEventListener('click',function(){
-    window.location.href='paspage.html';
-});
-certButton.addEventListener('click',function(){
-    window.location.href='certifi.html';
-});
-enterButton.addEventListener('click',function(){
-    window.location.href='entertain.html';
-});
-contButton.addEventListener('click',function(){
-    window.location.href='contact.html';
-});
-    </script>
-    
+
+</script>
 </body>
 </html>
