@@ -176,22 +176,61 @@ body{
     </div>
     <script>
 
-        
-        document.getElementById("loginform").addEventListener("submit",((event)=>{
-    event.preventDefault()
-    
-    let name = document.getElementById("name").value
-    let username=document.getElementById("username").value
-    let password=document.getElementById("password").value
-    
-if (name=="YASWANTH" && username=="25MIC7292" && password=="HAMm5uEn"){
-window.location.href="home.html"
-}
-else if(name=="NITHIN" && username=="25MIC7215" && password=="PPLMM")
-    window.location.href="home.html"
-}
-))
+document.getElementById("loginform").addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const regNo = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (!name || !regNo || !password) {
+        alert("Please fill all fields");
+        return;
+    }
+
+    try {
+
+        const response = await fetch("http://localhost:5001/login", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                name: name,
+                regNo: regNo,
+                password: password
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+
+            alert(data.message);
+
+            // Login successful
+            window.location.href = "home.html";
+
+        } else {
+
+            alert(data.message);
+
+        }
+
+    } catch (error) {
+
+        console.log(error);
+
+        alert("Cannot connect to server");
+
+    }
+
+});
+
 </script>
-    
 </body>
 </html>
